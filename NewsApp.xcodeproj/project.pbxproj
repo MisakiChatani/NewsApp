@@ -14,7 +14,6 @@
 		DC2371A82518D6A900943F4E /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2371A72518D6A900943F4E /* Page3ViewController.swift */; };
 		DC2371AA2518D6EC00943F4E /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2371A92518D6EC00943F4E /* Page4ViewController.swift */; };
 		DC2371AC2518D73E00943F4E /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2371AB2518D73E00943F4E /* Page5ViewController.swift */; };
-		DC496A35251AC608006DC213 /* start.mov in Resources */ = {isa = PBXBuildFile; fileRef = DC496A34251AC607006DC213 /* start.mov */; };
 		DC496A37251B25DC006DC213 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC496A36251B25DC006DC213 /* TopViewController.swift */; };
 		DC496A39251D6DE3006DC213 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC496A38251D6DE3006DC213 /* WebViewController.swift */; };
 		DC496A3B251ECB99006DC213 /* Page6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC496A3A251ECB99006DC213 /* Page6ViewController.swift */; };
@@ -41,7 +40,6 @@
 		DC2371A72518D6A900943F4E /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		DC2371A92518D6EC00943F4E /* Page4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
 		DC2371AB2518D73E00943F4E /* Page5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
-		DC496A34251AC607006DC213 /* start.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = start.mov; sourceTree = "<group>"; };
 		DC496A36251B25DC006DC213 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		DC496A38251D6DE3006DC213 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DC496A3A251ECB99006DC213 /* Page6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page6ViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				DC9E827A2517886F00946D61 /* 2.json */,
 				DC9E827C2517887900946D61 /* 3.json */,
 				DC9E827E2517888000946D61 /* 4.json */,
-				DC496A34251AC607006DC213 /* start.mov */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -230,7 +227,6 @@
 				DC9E827D2517887900946D61 /* 3.json in Resources */,
 				DC9E82832517908F00946D61 /* 1.json in Resources */,
 				DCF6C2A4251731690097317F /* Main.storyboard in Resources */,
-				DC496A35251AC608006DC213 /* start.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53KUC4RL82;
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53KUC4RL82;
 				INFOPLIST_FILE = NewsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

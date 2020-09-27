@@ -6,6 +6,8 @@
 //  Copyright © 2020 Misaki Chatani. All rights reserved.
 //
 
+//ボタンから画面遷移するTop Page画面
+
 import UIKit
 
 class TopViewController: UIViewController {

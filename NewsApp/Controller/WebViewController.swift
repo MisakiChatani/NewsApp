@@ -23,9 +23,9 @@ class WebViewController: UIViewController,WKUIDelegate {
 //        webViewをくっつける
         view.addSubview(webView)
 //        urlのキー値で保存されているものを入れる
-        let urlString = UserDefaults.standard.object(forKey: "url")
+        let urlString = UserDefaults.standard.object(forKey: "url" ) as! String
 //        文字列型をURL型に変更する
-        let url = URL(string: urlString as! String)
+        let url = URL(string: urlString)
         let request = URLRequest(url: url!)
         webView.load(request)
         

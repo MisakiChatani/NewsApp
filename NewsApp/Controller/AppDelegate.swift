@@ -7,16 +7,45 @@
 //
 
 import UIKit
+import UserNotifications
+import NotificationCenter
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //Notification登録前のおまじない。テストの為、現在のノーティフケーションを削除します
+               UNUserNotificationCenter.current().removeAllPendingNotificationRequests();
+               
+               //Notification登録前のおまじない。これがないとpermissionエラーが発生するので必要です。
+               UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in if granted {print("通知許可")}
+               }
+               
+               //以下で登録処理
+               let content = UNMutableNotificationContent()
+               content.title = "Newsアプリ";
+               content.body = "60秒ごとに通知が来るよ！";
+        content.sound = UNNotificationSound.default
+               let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 60, repeats: true)
+               let request = UNNotificationRequest.init(identifier: "TestNotification", content: content, trigger: trigger)
+               let center = UNUserNotificationCenter.current()
+               center.add(request)
+               center.delegate = self
         // Override point for customization after application launch.
         return true
     }
+    
+    //上記のNotificatioを５秒後に受け取る関数
+       //ポップアップ表示のタイミングで呼ばれる関数
+       //（アプリがアクティブ、非アクテイブ、アプリ未起動,バックグラウンドでも呼ばれる）
+       func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                   willPresent notification: UNNotification,
+                                   withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+           completionHandler([.alert,.sound])
+       }
 
     // MARK: UISceneSession Lifecycle
 

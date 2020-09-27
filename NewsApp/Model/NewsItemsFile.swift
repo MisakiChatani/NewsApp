@@ -8,8 +8,11 @@
 
 import Foundation
 
+//News Itemのclassを作る
+//変数を別々に作ることでデータを分けて使える
 class NewsItems{
 
+    
 var title:String?
 var url:String?
 var pubDate:String?
